@@ -1,0 +1,114 @@
+/* صفحه‌ی فضایی */
+.space {
+  min-height: calc(100vh - 92px);
+  padding: 60px 20px;
+  overflow: hidden;
+  background:
+    radial-gradient(circle at center, #172554 0%, #020617 55%, #000 100%);
+  color: white;
+  text-align: center;
+}
+
+/* عنوان صفحه */
+ text-align center
+
+
+/* عنوان صفحه.title {
+  position: relative;
+  z-index: 10;
+  margin-bottom: 40px;
+  font-size: clamp(36px, 6vw, 70px);
+}
+
+/* محوطه‌ی اصلی منظومه */
+.solarSystem {
+  position: relative;
+  width: 600px;
+  height: 600px;
+  margin: 0 auto;
+}
+
+/* خورشید */
+.sun {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  background: radial-gradient(circle, #fff7a8, #fbbf24, #f97316);
+  box-shadow:
+    0 0 30px #fbbf24,
+    0 0 70px #f97316;
+  transform: translate(-50%, -50%);
+}
+
+/* مدار زمین */
+.earthOrbit {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 300px;
+  height: 300px;
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  border-radius: 50%;
+  animation: orbit 8s linear infinite;
+  transform: translate(-50%, -50%);
+}
+
+/* زمین */
+.earth {
+  position: absolute;
+  top: 50%;
+  left: -16px;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: radial-gradient(circle at 35% 35%, #67e8f9, #2563eb 55%, #14532d);
+  box-shadow: 0 0 15px #38bdf8;
+}
+
+/* مدار مریخ */
+.marsOrbit {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 480px;
+  height: 480px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  border-radius: 50%;
+  animation: orbit 14s linear infinite;
+  transform: translate(-50%, -50%);
+}
+
+/* مریخ */
+.mars {
+  position: absolute;
+  top: 50%;
+  left: -13px;
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  background: radial-gradient(circle at 35% 35%, #fdba74, #dc2626);
+  box-shadow: 0 0 12px #ef4444;
+}
+
+/* انیمیشن چرخیدن مدارها */
+@keyframes orbit {
+  from {
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+
+  to {
+    transform: translate(-50%, -50%) rotate(360deg);
+  }
+}
+
+@media (max-width: 650px) {
+  .solarSystem {
+    width: 340px;
+    height: 340px;
+    transform: scale(0.7);
+    transform-origin: top center;
+  }
+}

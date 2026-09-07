@@ -1,0 +1,72 @@
+.projects {
+  padding: 120px 8%;
+  background-color: #111827;
+  color: white;
+}
+
+.label {
+  margin-bottom: 20px;
+  color: #a78bfa;
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.title {
+  max-width: 750px;
+  margin-bottom: 60px;
+  font-size: clamp(42px, 6vw, 76px);
+  line-height: 1;
+  letter-spacing: -3px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+.card {
+  min-height: 330px;
+  padding: 32px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  border: 1px solid #374151;
+  border-radius: 24px;
+  background-color: #1f2937;
+  transition: transform 0.3s, border-color 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-10px);
+  border-color: #a78bfa;
+}
+
+.technology {
+  margin-bottom: auto;
+  color: #a78bfa;
+  font-size: 14px;
+  text-transform: uppercase;
+}
+
+.cardTitle {
+  margin-bottom: 15px;
+  font-size: 28px;
+}
+
+.description {
+  color: #d1d5db;
+  line-height: 1.7;
+}
+
+@media (max-width: 850px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+
+  .card {
+    min-height: 260px;
+  }
+}

@@ -1,0 +1,61 @@
+.services {
+  padding: 120px 8%;
+  background-color: #f5f0e8;
+  color: #111827;
+}
+
+.label {
+  margin-bottom: 16px;
+  color: #7c3aed;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.title {
+  max-width: 700px;
+  margin: 0 0 60px;
+  font-size: clamp(42px, 6vw, 76px);
+  line-height: 1;
+  letter-spacing: -3px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.card {
+  min-height: 280px;
+  padding: 32px;
+  border: 1px solid #c9c1b5;
+  border-radius: 24px;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-8px);
+  background-color: #ffffff;
+}
+
+.cardTitle {
+  margin: 0 0 18px;
+  font-size: 28px;
+}
+
+.description {
+  margin: 0;
+  color: #5b6472;
+  font-size: 18px;
+  line-height: 1.7;
+}
+
+@media (max-width: 850px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+
+  .card {
+    min-height: auto;
+  }
+}
