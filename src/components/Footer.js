@@ -14,9 +14,9 @@ export default function Footer() {
         </Link>
       </div>
 
-      <p className={styles.copyright}>
+      <div className={styles.copyright}>
         <p>© 2026 Lumora. All rights reserved.</p>
-          Technology • Academic Support • Fragrance</p>
+          Technology • Academic Support • Fragrance </div>
     </footer>
       
 
