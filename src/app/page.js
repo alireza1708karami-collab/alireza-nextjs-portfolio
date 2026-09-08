@@ -1,41 +1,42 @@
 import Link from "next/link";
 import styles from "./page.module.css";
-import Projects from"@/components/Projects";
+import Projects from "@/components/Projects";
 import Services from "@/components/Services";
-import SolarSystem from "@/components/SolarSystem";
+import BookScene from "@/components/BookScene";
 
 export default function Home() {
   return (
-
     <>
-      <SolarSystem />
+      <BookScene />
 
-    <main className={styles.hero}>
-      <p className={styles.label}>
-        Computer Science • Web Development • AI
-      </p>
+      <main className={styles.hero}>
+        <p className={styles.label}>
+          TECHNOLOGY • ACADEMIC SUPPORT • FRAGRANCE
+        </p>
 
-      <h1 className={styles.title}>
-        Building digital experiences with purpose.
-      </h1>
+        <h1 className={styles.title}>
+          Ideas brought to life under one light.
+        </h1>
 
-      <p className={styles.description}>
-        I am Alireza, a Computer Science student building modern
-        websites, useful applications and AI-powered projects.
-      </p>
+        <p className={styles.description}>
+          Lumora brings together digital solutions, academic guidance and
+          carefully selected fragrances to help people build, grow and express
+          themselves.
+        </p>
 
-      <div className={styles.actions}>
-        <Link href="/about" className={styles.primaryButton}>
-          About Me
-        </Link>
+        <div className={styles.actions}>
+          <Link href="/services" className={styles.primaryButton}>
+            Explore Services
+          </Link>
 
-        <a href="#projects" className={styles.secondaryButton}>
-          View Projects
-        </a>
-      </div>
-      <Projects />
+          <Link href="/contact" className={styles.secondaryButton}>
+            Start a Request
+          </Link>
+        </div>
+      </main>
+
       <Services />
-    </main>
+      <Projects />
     </>
   );
 }

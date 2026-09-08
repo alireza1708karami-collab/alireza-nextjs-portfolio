@@ -48,6 +48,54 @@
   color: #e5e7eb;
 }
 
+
+.skill {
+  font-family: inherit;
+  font-size: 16px;
+  color: white;
+  cursor: pointer;
+  transition:
+    transform 0.25s ease,
+    border-color 0.25s ease,
+    background-color 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+.skill:hover {
+  transform: translateY(-7px);
+  border-color: #d5ad62;
+  box-shadow: 0 12px 25px rgba(213, 173, 98, 0.18);
+}
+
+.activeSkill {
+  border-color: #d5ad62;
+  background-color: #d5ad62;
+  color: #08101f;
+}
+
+.valueDetails {
+  max-width: 800px;
+  min-height: 130px;
+  margin-top: 40px;
+  padding: 28px;
+  border: 1px solid #293750;
+  border-radius: 18px;
+  background-color: #0e192c;
+}
+
+.valueDetails h3 {
+  margin: 0 0 12px;
+  color: #d5ad62;
+  font-size: 24px;
+}
+
+.valueDetails p {
+  margin: 0;
+  color: #b8c2d4;
+  font-size: 17px;
+  line-height: 1.7;
+}
+
 @media (max-width: 600px) {
   .about {
     padding: 70px 6%;

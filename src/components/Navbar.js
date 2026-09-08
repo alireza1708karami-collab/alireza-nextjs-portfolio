@@ -5,7 +5,7 @@ export default function Navbar() {
   return (
     <nav className={styles.navbar}>
       <Link href="/" className={styles.logo}>
-        ALIREZA
+        LUMORA
       </Link>
 
       <div className={styles.links}>
@@ -13,10 +13,13 @@ export default function Navbar() {
           Home
         </Link>
 
-    
+        <Link href="/services" className={styles.link}>
+          Services
+          </Link>
 
+          
         <Link href="/about" className={styles.link}>
-          About
+          About Lumora
         </Link>
 
         <Link href="/contact" className={styles.contact}>

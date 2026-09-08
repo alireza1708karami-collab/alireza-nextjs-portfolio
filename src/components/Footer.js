@@ -15,8 +15,10 @@ export default function Footer() {
       </div>
 
       <p className={styles.copyright}>
-        © 2026 Alireza. All rights reserved.
-      </p>
+        <p>© 2026 Lumora. All rights reserved.</p>
+          Technology • Academic Support • Fragrance</p>
     </footer>
+      
+
   );
 }

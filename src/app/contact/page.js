@@ -7,68 +7,117 @@ export default function ContactPage() {
   const [status, setStatus] = useState("");
 
   function handleSubmit(event) {
-    // جلوگیری از Refresh شدن صفحه
     event.preventDefault();
 
-    // دریافت اطلاعات فرم
     const formData = new FormData(event.currentTarget);
     const name = formData.get("name");
+    const service = formData.get("service");
 
-    // نمایش پیام موفقیت
-    setStatus(`Thank you ${name}! Your message is ready.`);
+    setStatus(
+      `Thank you ${name}! Your ${service} request has been prepared.`
+    );
 
-    // خالی‌کردن فرم
     event.currentTarget.reset();
   }
 
   return (
     <main className={styles.contact}>
-      <p className={styles.label}>Get in touch</p>
+      <div className={styles.backgroundGlow}></div>
 
-      <h1 className={styles.title}>
-        Have something to build?
-      </h1>
+      <section className={styles.introduction}>
+        <p className={styles.label}>GET IN TOUCH</p>
 
-      <p className={styles.description}>
-        Send me a message and let&apos;s discuss your idea.
-      </p>
+        <h1 className={styles.title}>
+          Let&apos;s bring your idea to light.
+        </h1>
 
-      <form className={styles.form} onSubmit={handleSubmit}>
-        <label htmlFor="name">Name</label>
-        <input
-          id="name"
-          name="name"
-          type="text"
-          placeholder="Your name"
-          required
-        />
+        <p className={styles.description}>
+          Tell us what you need and choose the Lumora service that matches your
+          goal. We will review your request and discuss the next steps with you.
+        </p>
 
-        <label htmlFor="email">Email</label>
-        <input
-          id="email"
-          name="email"
-          type="email"
-          placeholder="Your email"
-          required
-        />
+        <div className={styles.information}>
+          <div className={styles.infoCard}>
+            <span>01</span>
+            <div>
+              <h2>Choose a service</h2>
+              <p>Select technology, academic support or fragrance.</p>
+            </div>
+          </div>
 
-        <label htmlFor="message">Message</label>
-        <textarea
-          id="message"
-          name="message"
-          rows="6"
-          placeholder="Tell me about your project"
-          required
-        />
+          <div className={styles.infoCard}>
+            <span>02</span>
+            <div>
+              <h2>Describe your request</h2>
+              <p>Share the important details, goals and expected timeline.</p>
+            </div>
+          </div>
 
-        <button type="submit">Send Message</button>
+          <div className={styles.infoCard}>
+            <span>03</span>
+            <div>
+              <h2>Receive a response</h2>
+              <p>We will review your request and discuss the suitable solution.</p>
+            </div>
+          </div>
+        </div>
+      </section>
 
-        {status && (
-          <p className={styles.success}>
-            {status}
-          </p>
-        )}
-      </form>
+      <section className={styles.formCard}>
+        <p className={styles.formLabel}>START A REQUEST</p>
+        <h2>Tell us about your idea</h2>
+
+        <form className={styles.form} onSubmit={handleSubmit}>
+          <div className={styles.field}>
+            <label htmlFor="name">Your name</label>
+            <input
+              id="name"
+              name="name"
+              type="text"
+              placeholder="Enter your name"
+              required
+            />
+          </div>
+
+          <div className={styles.field}>
+            <label htmlFor="email">Email address</label>
+            <input
+              id="email"
+              name="email"
+              type="email"
+              placeholder="Enter your email"
+              required
+            />
+          </div>
+
+          <div className={styles.field}>
+            <label htmlFor="service">Select a service</label>
+            <select id="service" name="service" defaultValue="" required>
+              <option value="" disabled>
+                Choose a Lumora service
+              </option>
+              <option value="Lumora Tech">Lumora Tech</option>
+              <option value="Lumora Academic">Lumora Academic</option>
+              <option value="Lumora Fragrance">Lumora Fragrance</option>
+            </select>
+          </div>
+
+          <div className={styles.field}>
+            <label htmlFor="message">Your message</label>
+            <textarea
+              id="message"
+              name="message"
+              rows="6"
+              placeholder="Tell us about your request, goal and timeline"
+              required
+            />
+          </div>
+
+          <button type="submit">Send Request</button>
+
+          {status && <p className={styles.success}>{status}</p>}
+        </form>
+      </section>
     </main>
   );
 }

@@ -1,53 +1,67 @@
+import Link from "next/link";
 import styles from "./Projects.module.css";
 
-const projects = [
+const solutions = [
   {
-    id: 1,
-    title: "Personal Portfolio",
-    description: "A modern portfolio built with Next.js.",
-    technology: "Next.js",
+    number: "01",
+    category: "TECHNOLOGY",
+    title: "Digital Solutions",
+    description:
+      "Modern websites, programming support, debugging and practical technical solutions.",
+    href: "/services/tech",
   },
   {
-    id: 2,
-    title: "AI Healthcare Dashboard",
-    description: "A dashboard for analyzing healthcare data.",
-    technology: "AI and Data Science",
+    number: "02",
+    category: "ACADEMIC",
+    title: "Academic Support",
+    description:
+      "Professional guidance for CVs, SOPs, university applications and academic projects.",
+    href: "/services/academic",
   },
   {
-    id: 3,
-    title: "Task Manager",
-    description: "An application for managing daily tasks.",
-    technology: "React",
+    number: "03",
+    category: "FRAGRANCE",
+    title: "Fragrance Selection",
+    description:
+      "Original perfumes, personal recommendations and carefully selected fragrances.",
+    href: "/services/fragrance",
   },
 ];
 
 export default function Projects() {
+  return (
+    <section className={styles.projects}>
+      <p className={styles.label}>HOW WE CAN HELP</p>
 
-    return (
-  <section id="projects" className={styles.projects}>
-    <p className={styles.label}>Selected work</p>
+      <div className={styles.heading}>
+        <h2>Solutions shaped around your needs.</h2>
 
-    <h2 className={styles.title}>
-      Projects I have built
-    </h2>
+        <p>
+          From digital projects and academic goals to finding the right
+          fragrance, Lumora provides clear and personalized support.
+        </p>
+      </div>
 
-    <div className={styles.grid}>
-      {projects.map((project) => (
-        <article key={project.id} className={styles.card}>
-          <p className={styles.technology}>
-            {project.technology}
-          </p>
+      <div className={styles.grid}>
+        {solutions.map((solution) => (
+          <Link
+            href={solution.href}
+            className={styles.card}
+            key={solution.title}
+          >
+            <div className={styles.cardTop}>
+              <span>{solution.number}</span>
+              <span className={styles.arrow}>↗</span>
+            </div>
 
-          <h3 className={styles.cardTitle}>
-            {project.title}
-          </h3>
-
-          <p className={styles.description}>
-            {project.description}
-          </p>
-        </article>
-      ))}
-    </div>
-  </section>
-);
+            <div>
+              <p className={styles.category}>{solution.category}</p>
+              <h3>{solution.title}</h3>
+              <p className={styles.description}>{solution.description}</p>
+            </div>
+          </Link>
+        ))}
+      </div>
+    </section>
+  );
 }
