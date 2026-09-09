@@ -46,4 +46,28 @@ a {
   html {
     color-scheme: dark;
   }
+
+  
+html,
+body,
+* {
+  cursor:
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='32' height='32' viewBox='0 0 32 32'%3E%3Cline x1='5' y1='27' x2='25' y2='7' stroke='%236b3f23' stroke-width='5' stroke-linecap='round'/%3E%3Cline x1='9' y1='23' x2='26' y2='6' stroke='%23c59a6d' stroke-width='2' stroke-linecap='round'/%3E%3Ccircle cx='26' cy='6' r='2' fill='%23ffffff'/%3E%3C/svg%3E")
+      26 6,
+    auto !important;
+}
+
+
+a,
+button,
+select,
+option,
+input,
+textarea,
+[role="button"] {
+  cursor:
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='32' height='32' viewBox='0 0 32 32'%3E%3Cline x1='5' y1='27' x2='25' y2='7' stroke='%23d5ad62' stroke-width='5' stroke-linecap='round'/%3E%3Cline x1='9' y1='23' x2='26' y2='6' stroke='%23fff1a8' stroke-width='2' stroke-linecap='round'/%3E%3Ccircle cx='26' cy='6' r='3' fill='%23ffd76a'/%3E%3Cpath d='M26 0V3M26 9V12M20 6H23M29 6H32' stroke='%23ffd76a' stroke-width='1.5'/%3E%3C/svg%3E")
+      26 6,
+    pointer !important;
+}
 }

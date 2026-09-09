@@ -6,20 +6,43 @@ import styles from "./contact.module.css";
 export default function ContactPage() {
   const [status, setStatus] = useState("");
 
-  function handleSubmit(event) {
-    event.preventDefault();
+async function handleSubmit(event) {
+  event.preventDefault();
 
-    const formData = new FormData(event.currentTarget);
-    const name = formData.get("name");
-    const service = formData.get("service");
+  const form = event.currentTarget;
+  const formData = new FormData(form);
 
-    setStatus(
-      `Thank you ${name}! Your ${service} request has been prepared.`
-    );
+  setStatus("Sending your request...");
 
-    event.currentTarget.reset();
+  try {
+    const response = await fetch("https://formspree.io/f/mljeovag", {
+      method: "POST",
+      body: formData,
+      headers: {
+        Accept: "application/json",
+      },
+    });
+
+    if (response.ok) {
+      setStatus("Thank you! Your request has been sent successfully.");
+      form.reset();
+
+      if (response.ok) {
+  setStatus("Thank you! Your request has been sent successfully.");
+  form.reset();
+
+  
+  setTimeout(() => {
+    setStatus("");
+  }, 8000);
+}
+    } else {
+      setStatus("Something went wrong. Please try again.");
+    }
+  } catch (error) {
+    setStatus("Something went wrong. Please try again.");
   }
-
+}
   return (
     <main className={styles.contact}>
       <div className={styles.backgroundGlow}></div>
