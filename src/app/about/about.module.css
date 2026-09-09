@@ -52,13 +52,9 @@
 .skill {
   font-family: inherit;
   font-size: 16px;
-  color: white;
+  color: #d1d5db;
+  background-color: #0e192c;
   cursor: pointer;
-  transition:
-    transform 0.25s ease,
-    border-color 0.25s ease,
-    background-color 0.25s ease,
-    box-shadow 0.25s ease;
 }
 
 .skill:hover {
